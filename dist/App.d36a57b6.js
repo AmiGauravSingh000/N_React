@@ -28866,30 +28866,44 @@ if ("development" === 'production') {
 },{"react-dom":"node_modules/react-dom/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
-var _react = require("react");
+var _react = _interopRequireDefault(require("react"));
 var _client = _interopRequireDefault(require("react-dom/client"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var li1 = (0, _react.createElement)("li", {
-  id: "li",
-  key: "2000"
-}, "hello1");
-var li2 = (0, _react.createElement)("li", {
-  id: "li",
-  key: "2001"
-}, "hello2");
-var li3 = (0, _react.createElement)("li", {
-  id: "thirdli",
-  key: "2002"
-}, "hello3");
-var li4 = (0, _react.createElement)("li", {
-  id: "fourth",
-  key: "1999"
-}, "hello4");
-var ul = (0, _react.createElement)("ul", {
-  id: "ulist"
-}, li4, li1, li2, li3);
-var root = document.getElementById('root');
-_client.default.createRoot(root).render(ul);
+// Add a Logo on Left
+// Add a search bar in middle
+// Add User icon on right
+// Add CSS to make it look nice
+
+var Header = function Header() {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("header", {
+    className: "container",
+    style: {
+      display: "flex",
+      backgroundColor: "black",
+      height: "100px",
+      justifyContent: "space-between",
+      alignItems: "center",
+      color: "white"
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "logo",
+    style: {
+      margin: "20px"
+    }
+  }, "Logo"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "Search bar",
+    style: {
+      margin: "20px"
+    }
+  }, "searchBar"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "UserIcon",
+    style: {
+      margin: "20px"
+    }
+  }, "UserIcon")));
+};
+var root = _client.default.createRoot(document.getElementById('root')); // Create a root
+root.render( /*#__PURE__*/_react.default.createElement(Header, null)); // Render your component inside the root
 },{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -28915,7 +28929,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58543" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62996" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

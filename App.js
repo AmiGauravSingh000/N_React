@@ -1,50 +1,30 @@
-import {createElement as ce} from 'react';
-import ReactDOM from 'react-dom/client'; 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-const li1 = ce(
-  "li",
-  {
-    id: "li",
-    key: "2000",
-  },
-  "hello1"
-);
-const li2 = ce(
-  "li",
-  {
-    id: "li",
-    key: "2001",
-  },
-  "hello2"
-);
-const li3 = ce(
-  "li",
-  {
-    id: "thirdli",
-    key: "2002",
-  },
-  "hello3"
-);
-const li4 = ce(
-  "li",
-  {
-    id:"fourth",
-    key: "1999",
-  },
-  "hello4"
-)
+// Add a Logo on Left
+// Add a search bar in middle
+// Add User icon on right
+// Add CSS to make it look nice
 
-const ul = ce(
-  "ul",
-  {
-    id:"ulist",
-  
-  },
-  li4,
-  li1,
-  li2,
-  li3
-);
+const Header = () => {
+  return (
+<>
 
-const root = document.getElementById('root');
-ReactDOM.createRoot(root).render(ul);
+<header className='container' style={{display:"flex", backgroundColor:"black", height:"100px", justifyContent:"space-between", alignItems:"center", color:"white"}}>
+  <div className='logo' style={{margin: "20px"}}>
+    Logo
+  </div>
+  <div className='Search bar'  style={{margin: "20px"}}>
+    searchBar
+  </div>
+  <div className='UserIcon' style={{margin: "20px"}}>
+    UserIcon
+  </div>
+</header>
+
+</>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root')); // Create a root
+root.render(<Header />); // Render your component inside the root
