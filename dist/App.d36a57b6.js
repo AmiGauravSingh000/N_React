@@ -28866,20 +28866,30 @@ if ("development" === 'production') {
 },{"react-dom":"node_modules/react-dom/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
-var _react = _interopRequireDefault(require("react"));
+var _react = require("react");
 var _client = _interopRequireDefault(require("react-dom/client"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-// Import ReactDOM from react-dom, not react-dom/client
-
-var heading = _react.default.createElement("h1", {
-  id: "title"
-}, "heading from react");
-
-// create root using createRoot
-var root = _client.default.createRoot(document.getElementById("root"));
-
-// passing react element inside root
-root.render(heading);
+var li1 = (0, _react.createElement)("li", {
+  id: "li",
+  key: "2000"
+}, "hello1");
+var li2 = (0, _react.createElement)("li", {
+  id: "li",
+  key: "2001"
+}, "hello2");
+var li3 = (0, _react.createElement)("li", {
+  id: "thirdli",
+  key: "2002"
+}, "hello3");
+var li4 = (0, _react.createElement)("li", {
+  id: "fourth",
+  key: "1999"
+}, "hello4");
+var ul = (0, _react.createElement)("ul", {
+  id: "ulist"
+}, li4, li1, li2, li3);
+var root = document.getElementById('root');
+_client.default.createRoot(root).render(ul);
 },{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -28905,7 +28915,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50486" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58543" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
